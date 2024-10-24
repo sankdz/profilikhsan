@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Profil Ikhsan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        .social-media a.facebook {
+            background-color: #3b5998;
+        }
+        .social-media a.instagram {
+            background-color: #e1306c;
+        }
+        .social-media a.tiktok {
+            background-color: #69c9d0;
+        }
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+        .hamburger {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+        }
+        .button-container {
+            position: absolute;
+            left: 0;
+            top: 60px;
+        }
+        .menu-button, .contact-button, .product-button, .about-button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .menu-button {
+            background-color: #ff69b4;
+        }
+        .contact-button {
+            background-color: #add8e6;
+        }
+        .product-button {
+            background-color: #ffd700;
+        }
+        .about-button {
+            background-color: #add8e6;
+        }
+        .section {
+            display: none;
+            padding: 10px;
+            text-align: center;
+        }
+        .active {
+            display: block;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Product styling */
+        .product-grid {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .product-item {
+            width: 30%;
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-item h3 {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="hamburger" onclick="toggleDropdown()"></div>
+        <div class="hamburger" onclick="toggleDropdown()"></div>
+        <div class="hamburger" onclick="toggleDropdown()"></div>
+    </div>
+
+    <div class="dropdown" id="dropdownMenu">
+        <a href="#" onclick="showSection('pengalaman-kerja')">Pengalaman Kerja</a>
+        <a href="#" onclick="showSection('cv')">CV</a>
+        <a href="#" onclick="showSection('keahlian')">Keahlian</a>
+    </div>
+
+    <div class="button-container">
+        <a href="#" class="menu-button" onclick="showSection('home')">HOME</a>
+        <a href="#" class="contact-button" onclick="showSection('contact')">CONTACT</a>
+        <a href="#" class="product-button" onclick="showSection('product')">PRODUCT</a>
+        <a href="#" class="about-button" onclick="showSection('about')">ABOUT</a>
+    </div>
+
+    <div class="container">
+        <div id="home" class="section active">
+            <h1>Profil Ikhsan</h1>
+            <img src="gambar.jpg" alt="Ikhsan" style="width: 30%; height: auto; margin-bottom: 20px;">
+            <p>Hallo, nama saya Nur Ikhsan Setiawan Kurnia Rhamadan. Umur saya 17 tahun, sekarang saya kelas 12 SMK yang dimana saya mengambil jurusan TJKT.</p>
+        </div>
+
+        <div id="pengalaman-kerja" class="section">
+            <h2>Pengalaman Kerja</h2>
+            <ol>
+                <li>Membuka usaha jual beli HP second melalui marketplace.</li>
+                <li>Join TikTok affiliate.</li>
+                <li>Membantu dalam usaha orang tua di bidang kuliner.</li>
+            </ol>
+        </div>
+
+        <div id="cv" class="section">
+            <h2>CV</h2>
+            <img src="cv.jpg" alt="CV Ikhsan" style="width: 100%; height: auto; margin-top: 20px;">
+        </div>
+
+        <div id="keahlian" class="section">
+            <h2>Keahlian yang Saya Miliki</h2>
+            <ul>
+                <li>Mampu mengoperasikan komputer</li>
+                <li>Mampu mengkonfigurasi Mikrotik</li>
+                <li>Mampu membuat konten penjualan produk</li>
+                <li>Mampu memasarkan suatu produk</li>
+                <li>Mampu memecahkan suatu masalah yang ada</li>
+            </ul>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <img src="saya.jpg" alt="Ikhsan" style="width: 30%; height: auto; margin-bottom: 20px;">
+            <p>Nomor HP: <strong>085179992553</strong></p>
+            <p>Email: <strong>kurnianur53@gmail.com</strong></p>
+        </div>
+
+        <div id="product" class="section">
+            <h2>Product</h2>
+            <p>Di sini Anda dapat menemukan produk yang saya tawarkan.</p>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="produk 1.jpg" alt="Produk 1">
+                    <h3>Produk 1</h3>
+                </div>
+                <div class="product-item">
+                    <img src="produk 2.jpg" alt="Produk 2">
+                    <h3>Produk 2</h3>
+                </div>
+                <div class="product-item">
+                    <img src="produk 3.jpg" alt="Produk 3">
+                    <h3>Produk 3</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="section">
+            <h2>About Ikhsan</h2>
+            <img src="aku.jpg" alt="Ikhsan" style="width: 30%; height: auto; margin-bottom: 20px;">
+            <p>Hallo, nama saya Nur Ikhsan Setiawan Kurnia Rhamadan. Saya lahir dan besar di Sukoharjo, dan saat ini saya bersekolah di SMK jurusan TJKT.</p>
+            <p>Saya sangat tertarik dengan teknologi dan pemasaran, serta memiliki pengalaman dalam menjual produk secara online.</p>
+        </div>
+
+        <div class="social-media">
+            <h2>Temukan saya di:</h2>
+            <a href="https://www.facebook.com/asep.darama?mibextid=LQQJ4d" class="facebook" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/sandkxz?igsh=MWVlbnloNXo3Zmp0NQ%3D%3D&utm_source=qr" class="instagram" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@rhsdxz_?_t=8qm8es1tj7I&_r=1" class="tiktok" target="_blank">TikTok</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+
+        function showSection(section) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((sec) => {
+                sec.classList.remove('active');
+            });
+
+            // Show the selected section
+            const activeSection = document.getElementById(section);
+            activeSection.classList.add('active');
+
+            // Close dropdown after selecting an item
+            document.getElementById("dropdownMenu").style.display = "none";
+        }
+    </script>
+</body>
+</html>
